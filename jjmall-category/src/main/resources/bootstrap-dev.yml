@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: jjmall-category
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        ##没有起到作用
+        namespace:
+          f51efa2d-46cd-4d3d-bbef-8d09c415fe7b
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: category-service
+        file-extension: yml
+        namespace:
+          f51efa2d-46cd-4d3d-bbef-8d09c415fe7b

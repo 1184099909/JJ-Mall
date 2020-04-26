@@ -1,0 +1,24 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: jjmall-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        ##没有起到作用
+        namespace:
+          ae02f0ca-45ce-4957-87dd-d3bc0240b00c
+      config:
+        server-addr: 127.0.0.1:8848
+        prefix: gateway-service
+        file-extension: yml
+        namespace:
+          fae02f0ca-45ce-4957-87dd-d3bc0240b00c
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      enabled: true
